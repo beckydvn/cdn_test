@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/beckydvn/hovor-ui/static/css/style.css">
-    </head>
     <body>
         <script type="module">
-            import {host, buildLandingInput, initConvo} from "https://cdn.jsdelivr.net/gh/beckydvn/hovor-ui@master/static/js/export.js";
-            // host.host = ""
-            buildLandingInput(function(){ initConvo(); });
+            import {buildLandingInput, initConvo} from "https://cdn.jsdelivr.net/gh/dialogue-planning/widget@latest/static/js/export.js";
+            let host = "http://localhost:5000";
+            buildLandingInput(function(){ initConvo(host) }, host);
         </script>
     </body>
 </html> 
